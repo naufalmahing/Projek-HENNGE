@@ -1,0 +1,33 @@
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Auth0 Example</title>
+</head>
+<body>
+{% if session %}
+  <h1>Welcome {{session.userinfo.name}}!</h1>
+  <p>
+    <a href="{% url 'logout' %}">Logout</a>
+    <a href="https://dev-onwaezps.jp.auth0.com/samlp/YsRfk3QWYQihJcvWtOgY95lezT3XL5TV">Aha!</a>
+    <a href="https://dev-onwaezps.jp.auth0.com/samlp/3MKJVd6CGsbcCd0H7vSEAn1qRZj2Do4J">AssetSonnar</a>
+    <a href="https://dev-onwaezps.jp.auth0.com/samlp/FeW3LsVkQh9XhH1kjRUs52cPvc5YBs0K">Airbrake</a>
+    <button onclick="window.location.href='https:\\youtube.com'">Youtube</button>
+    <a href="{% url 'getlogs' %}">Get logs</a>
+  </p>
+
+  <form action="{% url 'resetpassword' %}" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Reset">
+  </form>
+
+  {{data}}
+  <hr>
+
+  <div><pre>{{pretty}}</pre></div>
+{% else %}
+  <h1>Welcome Guest</h1>
+  <p><a href="{% url 'login' %}">Login</a></p>
+{% endif %}
+</body>
+</html>

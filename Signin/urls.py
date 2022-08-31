@@ -19,6 +19,8 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
+    path("getlogs", views.get_logs, name="getlogs"),
+    path("resetpassword", views.reset_password, name="resetpassword"),
     path("", views.index, name="index"),
     path("login", views.login, name="login"),
     path("logout", views.logout, name="logout"),
