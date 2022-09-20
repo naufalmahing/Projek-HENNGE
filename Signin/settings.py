@@ -31,7 +31,8 @@ TEMPLATE_DIR = os.path.join(BASE_DIR, "Signin", "templates")
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', "django-insecure-nys0m=jmw^a54uy5r2i5n#fo_%b0isk3(tfkl6tmfa74twtsgj")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
+# DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 
@@ -124,6 +125,8 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
+
+# STATIC_ROOT = "/var/www/example.com/"
 
 STATIC_URL = "static/"
 
