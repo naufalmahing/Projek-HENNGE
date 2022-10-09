@@ -34,7 +34,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', "django-insecure-nys0m=jmw^a54u
 DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 # DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'hennge-env.eba-mgexs7jx.us-west-2.elasticbeanstalk.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'hennge-env.eba-benvmhpc.us-west-2.elasticbeanstalk.com']
 
 
 # Application definition
