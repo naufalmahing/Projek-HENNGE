@@ -130,7 +130,6 @@ dmypy.json
 *.bak
 
 # Database
-*.sqlite3
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
