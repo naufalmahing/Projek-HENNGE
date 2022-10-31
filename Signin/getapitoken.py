@@ -14,7 +14,5 @@ def get_api_token():
     res = conn.getresponse()
     data = res.read()
 
-    print(data.decode("utf-8"))
     data = json.loads(data)
-    print(type(data))
     return data

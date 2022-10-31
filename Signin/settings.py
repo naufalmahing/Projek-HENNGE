@@ -28,12 +28,10 @@ TEMPLATE_DIR = os.path.join(BASE_DIR, "Signin", "templates")
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', "django-insecure-nys0m=jmw^a54uy5r2i5n#fo_%b0isk3(tfkl6tmfa74twtsgj")
-SECRET_KEY = "django-insecure-nys0m=jmw^a54uy5r2i5n#fo_%b0isk3(tfkl6tmfa74twtsgj"
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', "django-insecure-nys0m=jmw^a54uy5r2i5n#fo_%b0isk3(tfkl6tmfa74twtsgj")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
-DEBUG = True
+DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'True'
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'hennge-env.eba-benvmhpc.us-west-2.elasticbeanstalk.com']
 
@@ -91,15 +89,6 @@ DATABASES = {
         "NAME": str(os.path.join(BASE_DIR, "db.sqlite3")),
     }
 }
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'OPTIONS': {
-#             'read_default_file': str(BASE_DIR / 'my.cnf'),
-#         },
-#     }
-# }
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
